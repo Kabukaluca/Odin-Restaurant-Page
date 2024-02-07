@@ -32,6 +32,14 @@ nav > button {
     url(images/restaurant-troja-speisen.jpg);
 }
 
+.menu-meal {
+    width: 25rem;
+    height: 7.5rem;
+
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
 
 /* Initial Load Styles */
 .placeholder {
