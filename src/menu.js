@@ -1,35 +1,48 @@
 export default displayMenu;
 
-const divContent = document.getElementById("content");
-const headline = document.createElement("h2");
-const meal1 = document.createElement("div");
-const meal2 = document.createElement("div");
-const meal3 = document.createElement("div");
-const meal4 = document.createElement("div");
-const meal5 = document.createElement("div");
-
 function displayMenu() {
-    headline.textContent = "The best of the Chef's";
-    headline.classList.add("headline");
+    const headline = document.createElement("h2");
+    headline.textContent = "The best of the Chefs";
+    
+    const divContent = document.getElementById("content");
     divContent.appendChild(headline);
 
-    meal1.textContent = "Brad's Pizza";
-    meal1.classList.add("menu-meal");
-    divContent.appendChild(meal1);
 
-    meal2.textContent = "Eric's Banana";
-    meal2.classList.add("menu-meal");
-    divContent.appendChild(meal2);
+    class Meal {
+    constructor(name, info) {
+    this.name = name;
+    this.info = info;
+    }
 
-    meal3.textContent = "Orlando's Spoon";
-    meal3.classList.add("menu-meal");
-    divContent.appendChild(meal3);
+    create() {
+    let meal = document.createElement("div");
+        meal.classList.add("menu-meal");
 
-    meal4.textContent = "Sean's Beans";
-    meal4.classList.add("menu-meal");
-    divContent.appendChild(meal4);
+    let mealName = document.createElement("div");
+        mealName.classList.add("mealName");
+        mealName.textContent = `${this.name}`;
 
-    meal5.textContent = "Saffron's Burritos";
-    meal5.classList.add("menu-meal");
-    divContent.appendChild(meal5);
-}
+    let mealInfo = document.createElement("div");
+        mealInfo.classList.add("mealInfo");
+        mealInfo.textContent = `${this.info}`;
+
+    meal.appendChild(mealName);
+    meal.appendChild(mealInfo);
+
+    divContent.appendChild(meal);
+    console.log(`${this.name}`);
+    }
+    };
+
+    const meal1 = new Meal("Brad's Pizza", "This is Brad's Fav!");
+    const meal2 = new Meal("Eric's Banana", "This is Eric's Fav!");
+    const meal3 = new Meal("Orlando's Spoon", "This is Orlando's secret sauce!");
+    const meal4 = new Meal("Saffron's Burritos", "The only bad one, is the one you didn't eat!");
+    const meal5 = new Meal("Sean's Beans", "You know how many make five?");
+
+    meal1.create();
+    meal2.create();
+    meal3.create();
+    meal4.create();
+    meal5.create();
+};
