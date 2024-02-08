@@ -1,7 +1,7 @@
 export default displayMenu;
 
 function displayMenu() {
-    const headline = document.createElement("h2");
+    const headline = document.createElement("h1");
     headline.textContent = "The best of the Chefs";
     
     const divContent = document.getElementById("content");
@@ -18,12 +18,12 @@ function displayMenu() {
     let meal = document.createElement("div");
         meal.classList.add("menu-meal");
 
-    let mealName = document.createElement("div");
-        mealName.classList.add("mealName");
+    let mealName = document.createElement("h3");
+        mealName.classList.add("meal-name");
         mealName.textContent = `${this.name}`;
 
     let mealInfo = document.createElement("div");
-        mealInfo.classList.add("mealInfo");
+        mealInfo.classList.add("meal-info");
         mealInfo.textContent = `${this.info}`;
 
     meal.appendChild(mealName);
@@ -36,7 +36,7 @@ function displayMenu() {
 
     const meal1 = new Meal("Brad's Pizza", "This is Brad's Fav!");
     const meal2 = new Meal("Eric's Banana", "This is Eric's Fav!");
-    const meal3 = new Meal("Orlando's Spoon", "This is Orlando's secret sauce!");
+    const meal3 = new Meal("Orlando's Spoon", "No worries, it's a huge one!");
     const meal4 = new Meal("Saffron's Burritos", "The only bad one, is the one you didn't eat!");
     const meal5 = new Meal("Sean's Beans", "You know how many make five?");
 
