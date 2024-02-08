@@ -3,7 +3,7 @@ import displayMenu from "./menu";
 import displayAbout from "./about";
 import "./style.css";
 
-const content = document.getElementById("content");
+const body = document.body;
 const home = document.getElementById("home");
 const menu = document.getElementById("menu");
 const about = document.getElementById("about");
@@ -11,19 +11,19 @@ const about = document.getElementById("about");
 home.addEventListener("click", () => {
     switchTab();
     initPageLoad();
-    // content.classList.add("background-img-home");
+    body.classList.add("background-img-home");
 });
 
 menu.addEventListener("click", () => {
     switchTab();
     displayMenu();
-    content.classList.add("background-img-menu");
+    body.classList.add("background-img-menu");
 });
 
 about.addEventListener("click", () => {
     switchTab();
     displayAbout();
-    // content.classList.add("background-img-about");
+    body.classList.add("background-img-about");
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -31,13 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-
 // Tab switching logic
 const switchTab = () => {
     const content = document.getElementById("content");
-    // content.classList.remove("background-img-home");
-    // content.classList.remove("background-img-menu");
-    // content.classList.remove("background-img-about");
+    body.classList.remove("background-img-home");
+    body.classList.remove("background-img-menu");
+    body.classList.remove("background-img-about");
     content.textContent = "";
 };
