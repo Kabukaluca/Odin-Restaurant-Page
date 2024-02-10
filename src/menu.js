@@ -2,10 +2,14 @@ export default displayMenu;
 
 function displayMenu() {
     const headline = document.createElement("h1");
+    headline.classList.add("menu-headline")
     headline.textContent = "The best of the Chefs";
     
     const divContent = document.getElementById("content");
     divContent.appendChild(headline);
+
+    const container = document.createElement("div");
+    container.classList.add("menu-content-container");
 
 
     class Meal {
@@ -29,8 +33,8 @@ function displayMenu() {
     meal.appendChild(mealName);
     meal.appendChild(mealInfo);
 
-    divContent.appendChild(meal);
-    console.log(`${this.name}`);
+    container.appendChild(meal);
+    divContent.appendChild(container);
     }
     };
 
