@@ -1,4 +1,5 @@
-import initPageLoad from "./initPageLoad";
+import displayInit from "./initPageLoad";
+import displayHome from "./home.js";
 import displayMenu from "./menu";
 import displayAbout from "./about";
 import "./style.css";
@@ -9,33 +10,48 @@ const menu = document.getElementById("menu");
 const about = document.getElementById("about");
 
 home.addEventListener("click", () => {
-    switchTab();
-    initPageLoad();
-    body.classList.add("background-img-home");
+    switchTab.initHome();
 });
 
 menu.addEventListener("click", () => {
-    switchTab();
-    displayMenu();
-    body.classList.add("background-img-menu");
+    switchTab.initMenu();
 });
 
 about.addEventListener("click", () => {
-    switchTab();
-    displayAbout();
-    body.classList.add("background-img-about");
+    switchTab.initAbout();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    initPageLoad();
+    displayInit();
 });
 
-
-// Tab switching logic
-const switchTab = () => {
+const clearPage = () => {
     const content = document.getElementById("content");
+    content.textContent = "";
+
     body.classList.remove("background-img-home");
     body.classList.remove("background-img-menu");
     body.classList.remove("background-img-about");
-    content.textContent = "";
+    body.classList.remove("background-init");
+}
+
+// Tab switching logic
+const switchTab = {
+    initHome() {
+        clearPage();
+        displayHome();
+        body.classList.add("background-img-home");
+    },
+
+    initMenu() {
+        clearPage();
+        displayMenu();
+        body.classList.add("background-img-menu");
+    },
+
+    initAbout() {
+        clearPage();
+        displayAbout();
+        body.classList.add("background-img-about");
+    }
 };
