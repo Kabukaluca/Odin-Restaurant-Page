@@ -1,9 +1,10 @@
 export default createNavbar;
-import Logo from "./images/restaurant-Troja-logo.png";
+import Logo from "./images/restaurant-Troja-logo-white.png";
 
 function createNavbar() {
     // Create Elements
     const header = document.querySelector("header");
+    const navContainer = document.createElement("div");
     const navbar = document.createElement("nav");
     const logo = new Image();
     const home = document.createElement("button");
@@ -19,6 +20,7 @@ function createNavbar() {
     logo.src = Logo;
 
     // Set Id 
+    navContainer.classList.add("nav-container");
     home.id = "home";
     menu.id = "menu";
     about.id = "about";
@@ -29,6 +31,7 @@ function createNavbar() {
     navbar.appendChild(home);
     navbar.appendChild(menu);
     navbar.appendChild(about);
-    navbar.appendChild(logo);
-    header.appendChild(navbar);
+    navContainer.appendChild(logo);
+    navContainer.appendChild(navbar);
+    header.appendChild(navContainer);
 };
