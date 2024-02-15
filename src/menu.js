@@ -38,11 +38,11 @@ function displayMenu() {
     }
     };
 
-    const meal1 = new Meal("Brad's Pizza", "This is Brad's Fav!");
-    const meal2 = new Meal("Eric's Banana", "This is Eric's Fav!");
-    const meal3 = new Meal("Orlando's Spoon", "No worries, it's a huge one!");
-    const meal4 = new Meal("Saffron's Burritos", "The only bad one, is the one you didn't eat!");
-    const meal5 = new Meal("Sean's Beans", "You know how many make five?");
+    const meal1 = new Meal("Brad's Pizza", "Savor the epic flavors of Brad's Pizza, a culinary odyssey inspired by Troy's heroic tales, where each slice conquers your taste buds triumphantly.");
+    const meal2 = new Meal("Eric's Banana", "A Trojan delight with grilled plantains symbolizing epic sweetness, wrapped in savory stories, a culinary ode to Troy's legendary allure!");
+    const meal3 = new Meal("Orlando's Spoon", "A culinary epic inspired by Troy, where grilled lamb, rosemary-infused potatoes, and ambrosia-like tzatziki unite in heroic gastronomic harmony.");
+    const meal4 = new Meal("Saffron's Burritos", "A Trojan delight wrapped in golden tortillas, conquering taste buds with Mediterranean-inspired fillings. A culinary saga unfolds!");
+    const meal5 = new Meal("Sean's Beans", "A hearty blend of Mediterranean flavors, inspired by the epic battles of Troy. Savor every bite, a heroic feast!");
 
     meal1.create();
     meal2.create();
