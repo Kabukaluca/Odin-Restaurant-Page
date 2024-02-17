@@ -5,11 +5,11 @@ function displayMenu() {
     headline.classList.add("menu-headline")
     headline.textContent = "The best of the Chefs";
     
-    const divContent = document.getElementById("content");
-    divContent.appendChild(headline);
-
     const container = document.createElement("div");
     container.classList.add("menu-content-container");
+    container.appendChild(headline);
+
+    const divContent = document.getElementById("content");
 
 
     class Meal {
