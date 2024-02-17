@@ -13,29 +13,29 @@ function displayMenu() {
 
 
     class Meal {
-    constructor(name, info) {
-    this.name = name;
-    this.info = info;
-    }
+        constructor(name, info) {
+        this.name = name;
+        this.info = info;
+        }
 
-    create() {
-    let meal = document.createElement("div");
-        meal.classList.add("menu-meal");
+        create() {
+        let meal = document.createElement("div");
+            meal.classList.add("menu-meal");
 
-    let mealName = document.createElement("h3");
-        mealName.classList.add("meal-name");
-        mealName.textContent = `${this.name}`;
+        let mealName = document.createElement("h3");
+            mealName.classList.add("meal-name");
+            mealName.textContent = `${this.name}`;
 
-    let mealInfo = document.createElement("div");
-        mealInfo.classList.add("meal-info");
-        mealInfo.textContent = `${this.info}`;
+        let mealInfo = document.createElement("div");
+            mealInfo.classList.add("meal-info");
+            mealInfo.textContent = `${this.info}`;
 
-    meal.appendChild(mealName);
-    meal.appendChild(mealInfo);
+        meal.appendChild(mealName);
+        meal.appendChild(mealInfo);
 
-    container.appendChild(meal);
-    divContent.appendChild(container);
-    }
+        container.appendChild(meal);
+        divContent.appendChild(container);
+        }
     };
 
     const meal1 = new Meal("Brad's Pizza", "Savor the epic flavors of Brad's Pizza, a culinary odyssey inspired by Troy's heroic tales, where each slice conquers your taste buds triumphantly.");
