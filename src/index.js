@@ -21,6 +21,7 @@ menu.addEventListener("click", () => {
 
 about.addEventListener("click", () => {
     switchTab.initAbout();
+
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -36,40 +37,33 @@ const clearPage = () => {
     body.classList.remove("background-img-about");
 };
 
-const displayActive = (page) => {
-    this.page = page;
-    let element = document.getElementById(`${this.page}`)
-    element.classList.add(`active`);
-};
+const toggleActive = (page) => {
+    home.classList.remove("active");
+    menu.classList.remove("active");
+    about.classList.remove("active");
 
-const removeActive = (page) => {
-    this.page = page;
-    let element = document.getElementById(`${this.page}`)
-    element.classList.remove(`active`);
+    page.classList.add("active");
 };
 
 // Tab switching logic
 const switchTab = {
     initHome() {
         clearPage();
-        //removeActive(home)
-        //displayActive(home)
+        toggleActive(home);
         displayHome();
         body.classList.add("background-img-home");
     },
 
     initMenu() {
         clearPage();
-        //removeActive(menu);
-        //displayActive(menu);
+        toggleActive(menu);
         displayMenu();
         body.classList.add("background-img-menu");
     },
 
     initAbout() {
         clearPage();
-        //removeActive(about);
-        //displayActive(about);
+        toggleActive(about);
         displayAbout();
         body.classList.add("background-img-about");
     }

@@ -79,13 +79,11 @@ nav > button {
     letter-spacing: 0.2rem;
 }
 
-nav > button:hover {
+nav > button.active {
     border-bottom: 2px solid white;
 }
 
-nav > #home.active
-nav > #menu.active
-nav > #about.active {
+nav > button:hover {
     border-bottom: 2px solid white;
 }
 
