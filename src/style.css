@@ -138,10 +138,6 @@ nav > button:hover {
     height: 100vh;
     color: white;
     background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.1), 
-      rgba(0, 0, 0, 0.1)
-    ),
     url(images/restaurant-troja-speisen.jpg);
     background-attachment: fixed;
 }
@@ -166,7 +162,7 @@ nav > button:hover {
 }
 
 .menu-meal {
-    width: 60%;
+    width: 80%;
     height: 7.5rem;
 
     border: 1px solid black;
@@ -187,6 +183,7 @@ nav > button:hover {
 
     padding: 1rem 0 2rem 0;
     gap: 0.75rem;
+    line-height: 1.75rem;
 }
 
 .menu-meal > .meal-name {
@@ -243,4 +240,62 @@ nav > button:hover {
 .about-paragraph {
     width: 80%;
     font-size: 1.5rem;
+}
+
+/* === Tablet Styles === */
+@media only screen and (min-width: 650px) and (max-width: 1000px) {
+
+    /* --- Menu --- */
+    .menu-headline {
+        letter-spacing: .2rem;
+        line-height: 2rem;
+    }
+    
+    .menu-content-container {
+        width: 60%;
+        gap: 2rem;
+    }
+    
+    .menu-meal {
+        width: 90%;
+        line-height: 1rem;
+    }
+    
+    .menu-meal > .meal-name {
+        width: 90%;
+    }
+    
+    .menu-meal > .meal-info {
+        width: 90%;
+        line-height: 1.5rem;
+    }
+}
+
+/* === Mobile Styles === */
+@media only screen and (max-width: 650px) {
+
+    /* --- Menu --- */
+    .menu-headline {
+        letter-spacing: .2rem;
+        line-height: 2rem;
+    }
+    
+    .menu-content-container {
+        width: 90%;
+        gap: 2rem;
+    }
+    
+    .menu-meal {
+        width: 90%;
+        line-height: 1rem;
+    }
+    
+    .menu-meal > .meal-name {
+        width: 90%;
+    }
+    
+    .menu-meal > .meal-info {
+        width: 90%;
+        line-height: 1.2rem;
+    }
 }
