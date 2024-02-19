@@ -207,10 +207,6 @@ nav > button:hover {
     height: 100vh;
     color: white;
     background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.1), 
-      rgba(0, 0, 0, 0.1)
-    ),
     url(images/restaurant-troja-tables.jpeg);
     background-size: cover;
     background-attachment: fixed;
@@ -218,11 +214,10 @@ nav > button:hover {
 
 .about-headline {
     letter-spacing: .2rem;
-
 }
 
 .about-container {
-    width: 70%;
+    width: 60%;
     line-height: 2rem;
 
     border: 1px solid black;
@@ -238,7 +233,7 @@ nav > button:hover {
 }
 
 .about-paragraph {
-    width: 80%;
+    width: 90%;
     font-size: 1.5rem;
 }
 
@@ -269,6 +264,16 @@ nav > button:hover {
         width: 90%;
         line-height: 1.5rem;
     }
+
+
+    /* --- About --- */
+    .about-container {
+        line-height: 1rem;
+    }
+    
+    .about-paragraph {
+        line-height: 1.5rem;
+    }
 }
 
 /* === Mobile Styles === */
@@ -297,5 +302,15 @@ nav > button:hover {
     .menu-meal > .meal-info {
         width: 90%;
         line-height: 1.2rem;
+    }
+
+    /* --- About --- */
+    .about-container {
+        width: 80%;
+        line-height: 1rem;
+    }
+    
+    .about-paragraph {
+        line-height: 1.5rem;
     }
 }
