@@ -49,6 +49,7 @@ body {
 #logo {
     max-width: 50%;
     max-height: 50%;
+    cursor: pointer;
 }
 
 nav {
@@ -116,13 +117,13 @@ nav > button:hover {
     text-align: center;
     gap: .75rem;
     margin-bottom: 15%;
+    line-height: 2.5rem;
 }
 
 .home-headline {
     padding: 0;
     margin: 0;
     font-size: 4rem;
-    height: 50%;
 }
 
 .sub-text {
@@ -279,6 +280,49 @@ nav > button:hover {
 /* === Mobile Styles === */
 @media only screen and (max-width: 650px) {
 
+    /* --- Nav --- */
+    .nav-container {
+        min-width: 400px;
+    }
+    
+    #logo {
+        min-width: 50%;
+    }
+    
+    nav {
+        width: 80vw;
+        gap: 2.5rem;
+    }
+
+    /* --- Home --- */
+    .home-content-container {
+        letter-spacing: 0.2rem;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: .75rem;
+        margin-bottom: 15%;
+        min-width: 400px;
+        line-height: 2rem;
+    }
+    
+    .home-headline {
+        padding: 0;
+        margin: 0;
+        font-size: 3rem;
+        
+    }
+    
+    .sub-text {
+        padding: 0;
+        margin: 0;
+        font-size: 1.25rem;
+    }
+
+    
     /* --- Menu --- */
     .menu-headline {
         letter-spacing: .2rem;
@@ -287,6 +331,7 @@ nav > button:hover {
     
     .menu-content-container {
         width: 90%;
+        min-width: 400px;
         gap: 2rem;
     }
     
@@ -307,6 +352,7 @@ nav > button:hover {
     /* --- About --- */
     .about-container {
         width: 80%;
+        min-width: 400px;
         line-height: 1rem;
     }
     
