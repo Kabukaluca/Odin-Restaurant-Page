@@ -2,9 +2,11 @@ import displayHome from "./home.js";
 import displayMenu from "./menu";
 import displayAbout from "./about";
 import createNavbar from "./website.js";
+import createFooter from "./footer.js";
 import "./style.css";
 
 createNavbar();
+createFooter();
 
 const body = document.body;
 const home = document.getElementById("home");
